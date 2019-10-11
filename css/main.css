@@ -7,7 +7,7 @@ html {
   margin: 50px auto;
   position: relative;
   width: 300px;
-  background; transperant url("../imagesclock-face.svg") no-repeat center center;
+  background: transparent url("../images/clock-face.svg") no-repeat center center;
 }
 
 .clock-center {
@@ -22,5 +22,25 @@ html {
   left: calc(50% - 7px);
   position: absolute;
   width: 28px;
-  transform-origin: 50% clac(100% - 8px);
+  transform-origin: 50% calc(100% - 8px);
+}
+
+.hand-minute {
+  animation: hand-rotate .5s linear infinite;
+}
+
+.hand-hour {
+  animation: hand-rotate 6s linear infinite;
+}
+
+@keyframes hand-rotate {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
 }
